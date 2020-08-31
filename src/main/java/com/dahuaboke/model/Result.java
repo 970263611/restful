@@ -12,8 +12,7 @@ public class Result<T> {
     private ResultCode code;    //状态码
     private Boolean success;    //成功状态
     private String message;     //附带信息
-    private T param;            //指定类型参数
-    private Object obj;         //未指定类型参数
+    private Object obj;         //参数
 
     public Result() {
     }
@@ -67,14 +66,6 @@ public class Result<T> {
 
     public void setMessage(String message) {
         this.message = message;
-    }
-
-    public T getParam() {
-        return param;
-    }
-
-    public void setParam(T param) {
-        this.param = param;
     }
 
     public Object getObj() {
