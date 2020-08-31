@@ -17,4 +17,5 @@ public class DAHUABOKE extends DEFAULT {
     public final static String SUCCESS = TOP_CODE + "000";
     //失败
     public final static String FAIL = TOP_CODE + "999";
+
 }

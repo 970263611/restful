@@ -1,6 +1,7 @@
 package com.dahuaboke.code;
 
 import com.dahuaboke.constant.DAHUABOKE;
+import com.dahuaboke.model.Code;
 
 import java.util.concurrent.ConcurrentLinkedDeque;
 
@@ -15,13 +16,12 @@ public enum ResultCode {
      * 可以继续添加自定义状态
      * 也可以根据应用划分不同前缀
      */
-    success(DAHUABOKE.SUCCESS),
-    fail(DAHUABOKE.FAIL);
+    success(new Code(DAHUABOKE.SUCCESS)),
+    fail(new Code(DAHUABOKE.FAIL));
 
-    private String code;
-    ConcurrentLinkedDeque
+    public Code code;
 
-    ResultCode(String code) {
+    ResultCode(Code code) {
         this.code = code;
     }
 }

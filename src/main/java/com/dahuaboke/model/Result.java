@@ -1,7 +1,5 @@
 package com.dahuaboke.model;
 
-import com.dahuaboke.code.ResultCode;
-
 /**
  * @Author dingwq
  * @Date 2020/8/31 10:49
@@ -9,7 +7,7 @@ import com.dahuaboke.code.ResultCode;
  */
 public class Result<T> {
 
-    private ResultCode code;    //状态码
+    private Code code;    //状态码
     private Boolean success;    //成功状态
     private String message;     //附带信息
     private Object obj;         //参数
@@ -26,29 +24,29 @@ public class Result<T> {
         this.obj = obj;
     }
 
-    public Result(ResultCode code, Boolean success) {
+    public Result(Code code, Boolean success) {
         this.code = code;
         this.success = success;
     }
 
-    public Result(ResultCode code, Boolean success, Object obj) {
+    public Result(Code code, Boolean success, Object obj) {
         this.code = code;
         this.success = success;
         this.obj = obj;
     }
 
-    public Result(ResultCode code, Boolean success, String message, Object obj) {
+    public Result(Code code, Boolean success, String message, Object obj) {
         this.code = code;
         this.success = success;
         this.message = message;
         this.obj = obj;
     }
 
-    public ResultCode getCode() {
+    public Code getCode() {
         return code;
     }
 
-    public void setCode(ResultCode code) {
+    public void setCode(Code code) {
         this.code = code;
     }
 
@@ -80,15 +78,15 @@ public class Result<T> {
         return new Result(true);
     }
 
-    public static Result success(ResultCode code) {
+    public static Result success(Code code) {
         return new Result(code, true);
     }
 
-    public static Result success(ResultCode code, Object obj) {
+    public static Result success(Code code, Object obj) {
         return new Result(code, true, obj);
     }
 
-    public static Result success(ResultCode code, String message, Object obj) {
+    public static Result success(Code code, String message, Object obj) {
         return new Result(code, true, message, obj);
     }
 
@@ -96,15 +94,15 @@ public class Result<T> {
         return new Result(false);
     }
 
-    public static Result fail(ResultCode code) {
+    public static Result fail(Code code) {
         return new Result(code, false);
     }
 
-    public static Result fail(ResultCode code, Object obj) {
+    public static Result fail(Code code, Object obj) {
         return new Result(code, false, obj);
     }
 
-    public static Result fail(ResultCode code, String message, Object obj) {
+    public static Result fail(Code code, String message, Object obj) {
         return new Result(code, false, message, obj);
     }
 
