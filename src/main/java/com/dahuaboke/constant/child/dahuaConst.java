@@ -1,11 +1,13 @@
-package com.dahuaboke.constant;
+package com.dahuaboke.constant.child;
+
+import com.dahuaboke.constant.defaultConst;
 
 /**
  * @Author dingwq
  * @Date 2020/8/31 11:18
  * @Description 大花博客常量类，建议不同类型创建不同的类
  */
-public class DAHUABOKE extends DEFAULT {
+public class dahuaConst extends defaultConst {
 
     private final static String TOP_CODE = FIRST + SECOND;
 

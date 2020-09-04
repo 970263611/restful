@@ -5,7 +5,7 @@ package com.dahuaboke.constant;
  * @Date 2020/8/31 14:14
  * @Description 所有常量父类
  */
-public class DEFAULT {
+public class defaultConst {
 
     /**
      * 前三位业务代码，中间三位预留码，后三位状态码

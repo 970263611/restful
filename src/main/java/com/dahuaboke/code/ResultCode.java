@@ -1,9 +1,7 @@
 package com.dahuaboke.code;
 
-import com.dahuaboke.constant.DAHUABOKE;
+import com.dahuaboke.constant.child.dahuaConst;
 import com.dahuaboke.model.Code;
-
-import java.util.concurrent.ConcurrentLinkedDeque;
 
 /**
  * @Author dingwq
@@ -16,8 +14,8 @@ public enum ResultCode {
      * 可以继续添加自定义状态
      * 也可以根据应用划分不同前缀
      */
-    success(new Code(DAHUABOKE.SUCCESS)),
-    fail(new Code(DAHUABOKE.FAIL));
+    success(new Code(dahuaConst.SUCCESS)),
+    fail(new Code(dahuaConst.FAIL));
 
     public Code code;
 
